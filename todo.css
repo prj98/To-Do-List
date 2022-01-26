@@ -18,27 +18,10 @@
     user-select: none;
   }
   ul li:nth-child(odd) {
-    background: #e2c1c1;
+    background: #888;
   }
   ul li:hover {
-    background: #ddd;
-  }
-  ul li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
-  }
-  li.checked::before{
-    content: "";
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
+    background: rgb(238, 161, 219);
   }
   .header {
     background-color: #110f0f;
@@ -73,4 +56,4 @@
     }
   .addBtn:hover {
     background-color: rgb(24, 23, 23);
-  }
+  }   
