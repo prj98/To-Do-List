@@ -1,7 +1,7 @@
 function addtodo(){
     const inputelement=document.getElementById("myInput");
     if(!inputelement.value){
-        alert("input is req.");
+        alert("input is required.");
     }else
     {
     const newtodo=document.createElement("li");
