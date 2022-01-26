@@ -5,67 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-     * {
-    box-sizing: border-box;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-  ul li {
-    cursor: pointer;
-    position: relative;
-    padding: 12px 8px 12px 40px;
-    background: #eee;
-    font-size: 18px;
-    transition: 0.2s;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  ul li:nth-child(odd) {
-    background: #888;
-  }
-  ul li:hover {
-    background: rgb(238, 161, 219);
-  }
-  .header {
-    background-color: #110f0f;
-    padding: 30px 40px;
-    color: rgb(235, 45, 45);
-    text-align: center;
-  }
-  .header:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  input {
-    margin: 0;
-    border: none;
-    border-radius: 0;
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: thistle;
-  }
-  .addBtn {
-    padding: 10px;
-    width: 20%;
-    background: #5a5252;
-    color: hsl(177, 18%, 80%);
-    float:right;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    }
-  .addBtn:hover {
-    background-color: rgb(24, 23, 23);
-  }   
-    </style>
+    
+    <link rel="stylesheet" href="todo.css">
   </head>
 
   <body>
@@ -82,53 +23,7 @@
       <li>REPEAT</li>
     </ul>
 
-    <script>
-        function addtodo(){
-    const inputelement=document.getElementById("myInput");
-    if(!inputelement.value){
-        alert("input is req.");
-    }else
-    {
-    const newtodo=document.createElement("li");
-    newtodo.innerHTML=inputelement.value;
-    const btn=document.createElement("button");
-    btn.innerHTML="DELETE";
-    btn.addEventListener('mouseover',function(){
-    btn.style.backgroundColor='red';
-    })
-   btn.addEventListener('mouseleave',function(){
-   btn.style.backgroundColor='white';
-  })
-    newtodo.appendChild(btn);
-    btn.style.float="right";
-    const unord=document.getElementById("myUL");
-    unord.appendChild(newtodo);
-    btn.addEventListener("click",()=>{
-     newtodo.remove();
-    });
-    inputelement.value="";
-}
-}
-addclose();
-function addclose(){
-    const listitem=document.getElementsByTagName("li");
-    for(let i=0;i<listitem.length;i++){
-        const item=listitem[i];
-      const deletebutton=document.createElement("button");
-      deletebutton.innerHTML="DELETE";
-    deletebutton.addEventListener('mouseover',function(){
-   deletebutton.style.backgroundColor='red';
-    })
-deletebutton.addEventListener('mouseleave',function(){
-   deletebutton.style.backgroundColor='white';
-  })
-      deletebutton.addEventListener("click",()=>{
-          item.remove();
-      });
-      item.appendChild(deletebutton); 
-      deletebutton.style.float="right";
-    }
-    }
+    <script src="todo.js" type="text/javascript">
     </script>
   </body>
 </html>
